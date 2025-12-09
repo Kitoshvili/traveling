@@ -1,4 +1,4 @@
-<!-- index.html -->
+<!-- index.html with burger menu and icons -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover Greece</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
     <header>
         <img src="images/logo.png" alt="Logo" class="logo">
+
         <nav>
-            <a href="#">HOME</a>
+            <a href="#" class="active">HOME</a>
             <a href="#">ABOUT US</a>
             <a href="#">OUR SERVICES</a>
             <a href="#">TOUR PACKAGE</a>
         </nav>
+
+        <i class="fa-solid fa-bars burger"></i>
     </header>
 
     <section class="hero">
@@ -28,46 +32,55 @@
     </section>
 
     <section class="services">
-    <div class="services-container">
-        <div class="services-text">
-            <h2>Our Hot Services</h2>
-            <p>We hope you can visit and enjoy these beautiful places with your friends and favorite people.</p>
+        <div class="services-container">
+            <div class="services-text">
+                <h2>Our Hot Services</h2>
+                <p>We hope you can visit and enjoy these beautiful places with your friends and favorite people.</p>
+            </div>
+            <div class="services-grid">
+                <div class="item">
+                    <img src="images/booking.png" alt="Booking">
+                    <h3>FLIGHT BOOKING</h3>
+                    <p>We hope you can visit and enjoy it.</p>
+                </div>
+                <div class="item">
+                    <img src="images/cruise.png" alt="Cruise">
+                    <h3>CRUISE TOUR</h3>
+                    <p>We hope you can visit and enjoy it.</p>
+                </div>
+                <div class="item">
+                    <img src="images/hotel.png" alt="Hotel">
+                    <h3>HOTEL & RESORT BOOKING</h3>
+                    <p>We hope you can visit and enjoy it.</p>
+                </div>
+                <div class="item">
+                    <img src="images/fire.png" alt="Fire">
+                    <h3>FIRE CAMP</h3>
+                    <p>We hope you can visit and enjoy it.</p>
+                </div>
+                <div class="item">
+                    <img src="images/family.png" alt="family">
+                    <h3>FAMILY TRIP PLANNER</h3>
+                    <p>We hope you can visit and enjoy it.</p>
+                </div>
+                <div class="item">
+                    <img src="images/Corporate.png" alt="Corporate">
+                    <h3>CORPORATE HOLIDAYS</h3>
+                    <p>We hope you can visit and enjoy it.</p>
+                </div>
+            </div>
         </div>
-        <div class="services-grid">
-            <div class="item">
-                <img src="images/booking.png" alt="Booking">
-                <h3>FLIGHT BOOKING</h3>
-                <p>We hope you can visit and enjoy it ths beautiful places with your friend and favorite people</p>
-            </div>
-            <div class="item">
-                <img src="images/cruise.png" alt="Cruise">
-                <h3>CRUISE TOUR</h3>
-                <p>We hope you can visit and enjoy it ths beautiful places with your friend and favorite people</p>
-            </div>
-            <div class="item">
-                <img src="images/hotel.png" alt="Hotel">
-                <h3>HOTEL & RESORT BOOKING</h3>
-                <p>We hope you can visit and enjoy it ths beautiful places with your friend and favorite people</p>
-            </div>
-            <div class="item">
-                <img src="images/fire.png" alt="Fire">
-                <h3>FIRE CAMP</h3>
-                <p>We hope you can visit and enjoy it ths beautiful places with your friend and favorite people</p>
-            </div>
-            <div class="item">
-                <img src="images/family.png" alt="family">
-                <h3>FAMILY TRIP PLANNER</h3>
-                <p>We hope you can visit and enjoy it ths beautiful places with your friend and favorite people</p>
-            </div>
-            <div class="item">
-                <img src="images/Corporate.png" alt="Corporate">
-                <h3>CORPORATE HOLYDAYS</h3>
-                <p>We hope you can visit and enjoy it ths beautiful places with your friend and favorite people</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
+<script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav');
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('open');
+    });
+</script>
 
 </body>
 </html>
+
